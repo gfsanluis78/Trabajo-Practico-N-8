@@ -41,7 +41,7 @@ public class Materia {
     @Override //Sobreescribo el metodo equals para poder comparar dos objetos viendo solo el id
     public boolean equals(Object o) {
 //        System.out.println("Comparo id's en el equals: "+idMateria+" "+((Materia)o).idMateria);           //Lo use para ver la compracion y probra la sobre escritura del metodo.
-        if(!(o instanceof Materia) && o == null){   //si no es es tipo materia o es nulo, no es igual.
+        if(!(o instanceof Materia) || o == null){   //si no es es tipo materia o es nulo, no es igual.
             return false;
         }else{
             if(idMateria==((Materia)o).idMateria){  //si el id del objeto comparable es igual al comparado, es el mismo objeto.
